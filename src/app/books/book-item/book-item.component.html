@@ -1,0 +1,18 @@
+<div class="main" (click)="open(book.formats)">
+  <div class="card">
+    <img src="{{book.formats['image/jpeg']}}" alt={{book.title}}>
+  </div>
+  <div class="desc">
+    <h4>{{book.title}}</h4>
+    <div class="author">
+      <p *ngIf="book.authors.length > 0">
+        <span *ngFor="let author of book.authors">
+          {{author.name}}<br/>
+        </span>
+      </p>
+      <p *ngIf="book.authors <= 0">
+        NA
+      </p>
+    </div>
+  </div>
+</div>

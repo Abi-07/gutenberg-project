@@ -1,0 +1,59 @@
+.main {
+  width: 114px;
+  padding: 20px;
+
+  .desc {
+    cursor: pointer;
+    h4,
+    .author {
+      margin-top: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+
+      span {
+        color: #a0a0a0;
+      }
+    }
+
+    .author {
+      margin-top: 2px;
+    }
+  }
+  p {
+    margin-top: 2px;
+    color: #a0a0a0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.card {
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 162px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+  }
+
+  h4 {
+    width: 100%;
+  }
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 20px 0 20px 0;
+  }
+}

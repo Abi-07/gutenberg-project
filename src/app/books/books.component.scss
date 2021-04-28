@@ -1,0 +1,102 @@
+::-webkit-input-placeholder {
+  /* Edge */
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+::placeholder {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.booklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f0f0f6;
+  padding: 20px;
+}
+
+.search-main {
+  padding: 2rem;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  .head {
+    display: flex;
+
+    h2 {
+      color: #5e56e7;
+    }
+
+    img {
+      width: 30px;
+      cursor: pointer;
+      margin-right: 10px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+
+  .search {
+    margin-top: 2rem;
+    position: relative;
+    img {
+      position: absolute;
+      top: 30%;
+      left: 3%;
+    }
+    input[type="search"] {
+      background-color: #f0f0f6;
+      border: none;
+      border-radius: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 40px;
+      width: 100%;
+      font-size: 16px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      padding-left: 45px;
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+        border: 1px solid #5e56e7;
+      }
+    }
+  }
+}
+
+.loading {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  app-book-item {
+    margin: 0 auto;
+  }
+
+  .search-main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .booklist {
+    margin: 0;
+    padding: 0;
+  }
+
+  .search .img {
+    left: 5%;
+  }
+}

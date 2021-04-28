@@ -1,0 +1,13 @@
+<div class="home-main">
+    <div class="header">
+        <h1>Gutenberg Project</h1>
+        <p>A social cataloging website that allows you to
+            freely search its database of books,
+            annotations, and reviews.</p>
+    </div>
+
+    <div class="genres">
+        <!-- passes values to ../shared/genre component & displays values -->
+        <app-genre *ngFor="let genere of generes" icon={{genere.icon}} title={{genere.title}}></app-genre>
+    </div>
+</div>

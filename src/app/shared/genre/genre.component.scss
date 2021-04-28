@@ -1,0 +1,38 @@
+.genre-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 2rem auto;
+  height: 50px;
+  width: 80%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+
+  div {
+    display: flex;
+    align-items: center;
+
+    img.icon {
+      width: 12%;
+    }
+
+    img.next {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .genre-card {
+    width: 80%;
+  }
+}

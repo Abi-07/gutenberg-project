@@ -1,0 +1,27 @@
+<div class="main">
+    <div class="search-main">
+        <div class="head">
+            <img (click)="back()" src="../../../assets/icons/Next.svg" alt="">
+            <h2>{{genere}}</h2>
+        </div>
+    
+    <!-- SEARCH BOX START-->
+        <div class="search">
+            <img src="../../../assets/icons/Search.svg" alt="">
+            <input type="search" [(ngModel)]="searchQuery" (input)="search()" placeholder="Search">
+        </div>
+    <!-- SEARCH BOX ENDS -->
+    </div>
+
+    <!-- BOOKS DISPLAY SECTION STARTS-->
+    <div class="booklist" *ngIf="books && books.length > 0">
+        <app-book-item *ngFor="let book of books" [book]=book>
+        </app-book-item>
+        
+    </div>
+
+    <div class="loading" *ngIf="!books || books.length == 0">
+        <h2>Loading...</h2>
+    </div>
+     <!-- BOOKS DISPLAY SECTION STARTS-->
+</div>

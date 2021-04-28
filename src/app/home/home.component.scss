@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+}
+
+.home-main {
+  background-color: #f8f7ff;
+  height: auto;
+  padding-bottom: 2rem;
+
+  .header {
+    padding: 4rem 2rem 3rem 4rem;
+    background-image: url("../../assets/Pattern.svg");
+
+    h1 {
+      color: #5e56e7;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+  }
+
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+
+    app-genre {
+      flex: 50%;
+    }
+  }
+}
+
+.home-main .genres app-genre:last-child {
+  flex: 0.5;
+}
+
+@media (max-width: 768px) {
+  .home-main .genres app-genre {
+    flex: 100%;
+  }
+  .home-main .genres app-genre:last-child {
+    flex: 1;
+  }
+  .home-main .header {
+    padding: 4rem 2rem 3rem 2rem;
+  }
+}
